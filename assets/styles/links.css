@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Playfair+Display:wght@400;800&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,45 +8,57 @@
   box-sizing: border-box;
 }
 
+:root {
+	--first-white: #f2e2ce;
+	--second-pink: #f2c7ae;
+	--third-orange: #bf522a;
+	--main-brown: #260801;/* cor da logo */
+	--second-brown: #592316;
+  --white: #fff;
+}
+
 body {
-  background: var(--second-blue);
-  background: var(--blue-gradient);
+  background: var(--second-pink);
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   caret-color: transparent;
-  color: var(--light-theme);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white);
+  letter-spacing: 2px;
   letter-spacing: 1px;
-  background: var(--main-blue) url(../images/bg-tech.webp) bottom center/cover no-repeat fixed;
+  background: var(--second-pink) url(../images/Wallpaper.png) bottom center/cover no-repeat fixed;
 }
 
 main {
-  background-color: rgba(38, 117, 166, 0.5);
-  max-width: 600px;
-  padding: 3rem;
+  max-width: 500px;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 10px;
 }
 
+.logo {
+  width: 180px;
+}
+
 h1 {
-  font-weight: 900;
-  font-size: 2rem;
+  font-weight: 800;
+  font-size: 1.4rem;
 }
 
 p {
-  font-size: 1.5rem;
-  font-weight: 900;
-  margin: var(--margin-1) 0 var(--margin-4) 0;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
-h1, p, li {
-  letter-spacing: 2px;
-}
-
-img {
-  max-width: 250px;
+h1, p {
+  background-color: var(--main-brown);
+  border-radius: 10px;
+  padding: .5rem;
 }
 
 ul {
@@ -53,33 +67,27 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--light-theme);
+  color: var(--white);
+}
+
+a .btn {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: var(--main-brown);
+  box-shadow:
+  10px 10px 4px var(--second-brown);
+;
 }
 
 .icon {
   margin-right: .8rem;
+  font-size: 2rem;
 }
 
 li:hover .icon {
   animation: shake 0.5s ease-in-out;
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(-1px, 2px);
-  }
-  25% {
-    transform: translate(1px, -2px);
-  }
-  50% {
-    transform: translate(-1px, 2px);
-  }
-  75% {
-    transform: translate(1px, -2px);
-  }
-  100% {
-    transform: translate(-1px, 2px);
-  }
 }
 
 .btn {
@@ -88,58 +96,34 @@ li:hover .icon {
   align-items: center;
   width: 100%;
   padding: .5rem;
-  margin-bottom: var(--margin-2);
-  background-size: 300% 300%;
-  backdrop-filter: blur(1rem);
-  border-radius: 10px;
-  transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
-  background-image: linear-gradient(var(--medium-dark), var(--medium-dark)),  linear-gradient(137.48deg, var(--dark-blue) 10%,var(--third-blue) 45%, var(--first-blue) 67%, var(--second-blue) 87%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
 }
 
-#container-stars {
-  position: absolute;
-  z-index: -1;
+.footer-icons {
+  margin-top: 3rem;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 10px;
-}
-
-#glow {
-  position: absolute;
   display: flex;
-  width: 12rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.circle {
+.icon-footer {
   width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 10s infinite;
-  z-index: -1;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
 }
 
-.btn:hover #container-stars {
-  background-color: var(--dark-theme);
+.btn:hover,
+.icon-footer:hover {
+  transform: scale(0.98);
 }
 
-.btn:hover {
-  transform: scale(1.05)
+@media screen and (min-width: 800px){
+ 
+body {
+  background: var(--second-pink) url(../images/Wallpaper-horiz.png) bottom center/cover no-repeat fixed;
 }
 
-.btn:active {
-  border: double 4px var(--third-blue);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: var(--third-blue);
 }
