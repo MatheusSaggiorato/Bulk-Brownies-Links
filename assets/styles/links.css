@@ -12,7 +12,7 @@
 	--first-white: #f2e2ce;
 	--second-pink: #f2c7ae;
 	--third-orange: #bf522a;
-	--main-brown: #260801;/* cor da logo */
+	--first-brown: #260801;/* cor da logo */
 	--second-brown: #592316;
   --white: #fff;
 }
@@ -28,8 +28,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--white);
   letter-spacing: 2px;
-  letter-spacing: 1px;
-  background: var(--second-pink) url(../images/Wallpaper.png) bottom center/cover no-repeat fixed;
+  background: var(--second-pink) url(../images/Wallpaper-t.webp) bottom center/cover no-repeat fixed;
 }
 
 main {
@@ -43,22 +42,22 @@ main {
   width: 180px;
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 1.4rem;
-}
-
 p {
   font-size: 1rem;
   font-weight: 400;
   margin-top: 1rem;
-  margin-bottom: 3rem;
 }
 
-h1, p {
-  background-color: var(--main-brown);
+.title {
+  background-color: var(--second-brown);
   border-radius: 10px;
   padding: .5rem;
+  margin-bottom: 4rem;
+}
+
+p {
+  background-color: var(--second-brown);
+  border-radius: 10px;
 }
 
 ul {
@@ -72,13 +71,12 @@ a {
 
 a .btn {
   font-size: 1.1rem;
-  font-weight: 800;
-  margin-top: 1rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
   border-radius: 10px;
-  background-color: var(--main-brown);
+  background-color: var(--second-brown);
   box-shadow:
-  10px 10px 4px var(--second-brown);
-;
+  6px 6px 4px var(--first-brown);
 }
 
 .icon {
@@ -123,7 +121,7 @@ li:hover .icon {
 @media screen and (min-width: 800px){
  
 body {
-  background: var(--second-pink) url(../images/Wallpaper-horiz.png) bottom center/cover no-repeat fixed;
+  background: var(--second-pink) url(../images/Wallpaper-horiz-t.webp) bottom center/cover no-repeat fixed;
 }
 
 }
